@@ -1,0 +1,52 @@
+.v-application--wrap {
+    display: block !important;
+}
+
+div#sidebar {
+    margin-top: 64px;
+    float: left;
+    height: calc(100vh - 64px) !important;
+    width: 256px !important;
+}
+aside.v-navigation-drawer.v-navigation-drawer--open.theme--light {
+    padding-top: 30px;
+}
+
+div#contenedor {
+    float: right;
+    width: calc(100% - 256px);
+    min-width: auto;
+    max-width: none;
+}
+
+div#search-container {
+    position: fixed;
+    right: 80px;
+    background-color: #e5e5e5 !important;
+    z-index: 9;
+    border-radius: 20px;
+    margin-top: 12px !important;
+    font-size: 13px;
+}
+
+#header .primary {
+    background-color: #4fa693 !important;
+    border-color: #4fa693 !important;
+}
+
+.v-application .deep-purple.accent-4 {
+    background-color: #5d3d25 !important;
+    border-color: #6200ea !important;
+}
+.d-block .v-card {
+    display: block;
+    float: left;
+    margin: 1% !important;
+    width: 31.3%;
+    flex: auto;
+}
+@media (min-width:1500px) {
+    .d-block .v-card {
+        width: 23%;
+    }
+}
