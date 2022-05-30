@@ -16,7 +16,7 @@
                   <shopping-cart inline-template :items="cartItems">
                       <div>
                         <table class="table table-cart">
-                            <tr v-for="(item, index) in items">
+                            <tr :key="items" v-for="(item, index) in items">
                               <td>{{item.title}}</td>
                               <td style="width:120px">QTY:
                                   <input v-model="item.qty" class="form-control input-qty" type="number" min="1">
@@ -49,14 +49,14 @@
       
       <div class="container">
           <div class="row">
-            <div class="col-xs-3 text-center" v-for="item in items">
+            <div class="col-xs-3 text-center" :key="items" v-for="item in items">
                 <img class="img-responsive" :src="item.image" alt="">
                 <h5>{{ item.title }}</h5>
                 <h6>${{ item.price | formatCurrency }}</h6>
-                <p class="text-center"><input v-model="item.qty" type="number" class="form-control" placeholder="Qty" min="1"/></p>
-                  
+                <div class="text-center">
+                  <input v-model="item.qty" type="number" class="form-control" placeholder="Qty" min="1"/>
                   <button @click="addToCart(item)" class="btn btn-sm btn-primary">Add to Cart</button>
-                </p>
+                </div>
             </div>
           </div>
       </div>
